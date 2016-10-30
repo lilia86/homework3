@@ -20,6 +20,10 @@ class CommonCustomer implements CustomerInf
     public function __construct($cusId)
     {
         $this->customerId = $cusId;
+        /**
+         * @var int $customerId
+         * customer nme and type are loading from database
+         */
         $this->customerName = 'John';
         $this->customerType = '1';
     }
