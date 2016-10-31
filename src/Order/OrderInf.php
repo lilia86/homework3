@@ -8,11 +8,10 @@ use Vendor\Service\Customer\CommonCustomer;
 abstract class OrderInf
 {
     /**
-     * @var int $quantity
+     * @var int
      * @var object $customerPriceType
-     * @var int $price
+     * @var int    $price
      * @var string customerName
-     *
      */
     public $quantity;
     protected $customerPricePolicy;
@@ -32,17 +31,15 @@ abstract class OrderInf
         $this->customer = $user;
     }
 
-    public function price()
+    protected function price()
     {
         return $this->customerPricePolicy->getPrice($this);
-
     }
 
-    public function getQuantity() {
-         return $this->quantity;
+    public function getQuantity()
+    {
+        return $this->quantity;
     }
 
     abstract public function description();
-
 }
-

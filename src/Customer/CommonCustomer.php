@@ -2,14 +2,12 @@
 
 namespace Vendor\Service\Customer;
 
-
 class CommonCustomer implements CustomerInf
 {
     /**
-     * @var int $customerId
+     * @var int
      * @var string $customerType;
      * @var string $customerName;
-     *
      */
     public $customerId;
     public $customerName;
@@ -20,7 +18,7 @@ class CommonCustomer implements CustomerInf
     public function __construct($cusId)
     {
         $this->customerId = $cusId;
-        /**
+        /*
          * @var int $customerId
          * customer nme and type are loading from database
          */
@@ -33,4 +31,3 @@ class CommonCustomer implements CustomerInf
         return $this->customerName;
     }
 }
-
