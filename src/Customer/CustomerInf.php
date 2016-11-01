@@ -2,8 +2,30 @@
 
 namespace Vendor\Service\Customer;
 
-interface CustomerInf
+abstract class CustomerInf
 {
-    public function __construct($cusId);
-    public function getName();
+    /**
+     * @var int
+     * @var string $customerType;
+     * @var string $customerName;
+     */
+    public $customerId;
+    public $customerName;
+    public $customerType;
+
+    /**
+     * @param int $cusId
+     */
+    abstract public function __construct($cusId)
+    {
+        $this->customerId = $cusId;
+        /*
+         * @var int $customerId
+         * customer nme and type are loading from database
+         */
+        $this->customerName = 'John';
+        $this->customerType = '1';
+    }
+
+    abstract public function getName();
 }
